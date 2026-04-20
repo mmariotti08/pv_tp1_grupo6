@@ -4,105 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorador de Proyectos</title>
+
+    <link rel="stylesheet" href="assets/css/proyectos.css">
+
+    <style>
+        #titulo-principal {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitulo-header {
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Explorador de Proyectos Educativos</h1>
-    <p>Consulta los proyectos disponibles</p>
-</header>
+    <header class="encabezado">
+        <h1 id="titulo-principal">Explorador de Proyectos Educativos</h1>
+        <p class="subtitulo-header">Consulta los proyectos disponibles</p>
+    </header>
 
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="detalle.html">Detalle</a>
-    <a href="perfil.html">Perfil</a>
-</nav>
+    <nav class="menu-navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="detalle.html">Detalle</a>
+        <a href="perfil.html">Perfil</a>
+    </nav>
 
-<main>
-    <aside>
-        <h2>Filtros</h2>
+    <main class="contenedor-principal">
+        <aside class="filtros">
+            <h2>Filtros</h2>
 
-        <label>Categoría:</label>
-        <select>
-            <option>Todas</option>
-            <option>Programación</option>
-            <option>Base de Datos</option>
-            <option>Diseño Web</option>
-        </select>
+            <label for="categoria">Categoría:</label>
+            <select id="categoria">
+                <option>Todas</option>
+                <option>Programación</option>
+                <option>Base de Datos</option>
+                <option>Diseño Web</option>
+                <option>Gestión</option>
+            </select>
 
-        <br><br>
+            <label for="anio">Año:</label>
+            <select id="anio">
+                <option>Todos</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+            </select>
 
-        <label>Año:</label>
-        <select>
-            <option>Todos</option>
-            <option>2023</option>
-            <option>2024</option>
-            <option>2025</option>
-        </select>
+            <label for="estado">Estado:</label>
+            <select id="estado">
+                <option>Todos</option>
+                <option>En curso</option>
+                <option>Finalizado</option>
+            </select>
+        </aside>
 
-        <br><br>
+        <section class="seccion-proyectos">
+            <h2>Proyectos</h2>
 
-        <label>Estado:</label>
-        <select>
-            <option>Todos</option>
-            <option>En curso</option>
-            <option>Finalizado</option>
-        </select>
-    </aside>
+            <div class="grid-proyectos">
+                <article class="card-proyecto">
+                    <img src="https://via.placeholder.com/200" alt="Sistema de Tutorías Virtuales">
+                    <h3>Sistema de Tutorías Virtuales</h3>
+                    <p>Plataforma que permite a los estudiantes solicitar apoyo académico y coordinar clases con tutores de manera online.</p>
+                    <p><strong>Categoría:</strong> Programación</p>
+                    <a href="detalle.html" class="boton-detalle" style="border: 2px solid #1d4ed8;">Ver detalle</a>
+                </article>
 
-    <section>
-        <h2>Proyectos</h2>
+                <article class="card-proyecto">
+                    <img src="https://via.placeholder.com/200" alt="Biblioteca Escolar Digital">
+                    <h3>Biblioteca Escolar Digital</h3>
+                    <p>Aplicación para gestionar préstamos de libros, consultas y registro de material bibliográfico dentro de la institución.</p>
+                    <p><strong>Categoría:</strong> Base de Datos</p>
+                    <a href="detalle.html" class="boton-detalle">Ver detalle</a>
+                </article>
 
-        <article>
-            <h3>Proyecto 1</h3>
-            <img src="https://via.placeholder.com/200" alt="proyecto">
-      <h3>Sistema de Tutorías Virtuales</h3>
-<p>Plataforma que permite a los estudiantes solicitar apoyo académico y coordinar clases con tutores de manera online.</p>
-<p>Categoría: Programación</p>
-            <a href="detalle.html">Ver detalle</a>
-        </article>
+                <article class="card-proyecto">
+                    <img src="https://via.placeholder.com/200" alt="Portal de Cursos Online">
+                    <h3>Portal de Cursos Online</h3>
+                    <p>Sitio web donde se publican cursos, contenidos educativos y actividades para el aprendizaje a distancia.</p>
+                    <p><strong>Categoría:</strong> Diseño Web</p>
+                    <a href="detalle.html" class="boton-detalle">Ver detalle</a>
+                </article>
 
-        <article>
-            <h3>Proyecto 2</h3>
-            <img src="https://via.placeholder.com/200" alt="proyecto">
-            <h3>Biblioteca Escolar Digital</h3>
-<p>Aplicación para gestionar préstamos de libros, consultas y registro de material bibliográfico dentro de la institución.</p>
-<p>Categoría: Base de Datos</p>
-            <a href="detalle.html">Ver detalle</a>
-        </article>
+                <article class="card-proyecto">
+                    <img src="https://via.placeholder.com/200" alt="Agenda Académica">
+                    <h3>Agenda Académica</h3>
+                    <p>Herramienta digital para organizar tareas, fechas de exámenes y recordatorios importantes para estudiantes.</p>
+                    <p><strong>Categoría:</strong> Programación</p>
+                    <a href="detalle.html" class="boton-detalle">Ver detalle</a>
+                </article>
 
-        <article>
-            <h3>Proyecto 3</h3>
-            <img src="https://via.placeholder.com/200" alt="proyecto">
-<h3>Portal de Cursos Online</h3>
-<p>Sitio web donde se publican cursos, contenidos educativos y actividades para el aprendizaje a distancia.</p>
-<p>Categoría: Diseño Web</p>
-            <a href="detalle.html">Ver detalle</a>
-        </article>
+                <article class="card-proyecto">
+                    <img src="https://via.placeholder.com/200" alt="Gestión de Proyectos Educativos">
+                    <h3>Gestión de Proyectos Educativos</h3>
+                    <p>Sistema que permite registrar, organizar y hacer seguimiento de proyectos realizados en el ámbito educativo.</p>
+                    <p><strong>Categoría:</strong> Gestión</p>
+                    <a href="detalle.html" class="boton-detalle">Ver detalle</a>
+                </article>
+            </div>
+        </section>
+    </main>
 
-        <article>
-            <h3>Proyecto 4</h3>
-            <img src="https://via.placeholder.com/200" alt="proyecto">
-<h3>Agenda Académica</h3>
-<p>Herramienta digital para organizar tareas, fechas de exámenes y recordatorios importantes para estudiantes.</p>
-<p>Categoría: Programación</p>
-            <a href="detalle.html">Ver detalle</a>
-        </article>
-
-        <article>
-            <h3>Proyecto 5</h3>
-            <img src="https://via.placeholder.com/200" alt="proyecto">
-<h3>Gestión de Proyectos Educativos</h3>
-<p>Sistema que permite registrar, organizar y hacer seguimiento de proyectos realizados en el ámbito educativo.</p>
-<p>Categoría: Gestión</p>
-            <a href="detalle.html">Ver detalle</a>
-        </article>
-
-    </section>
-</main>
-
-<footer>
-    <p>Grupo 6 - TP1</p>
-</footer>
+    <footer class="pie-pagina">
+        <p>Grupo 6 - TP1</p>
+    </footer>
 </body>
 </html>
